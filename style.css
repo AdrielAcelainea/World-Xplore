@@ -1,0 +1,267 @@
+ .mainmenu {
+    text-align: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-family: 'Acme', sans-serif;
+    color:antiquewhite;
+    background-color:cornflowerblue;
+    padding: 10px;
+    position: absolute; 
+    top: 0;
+    right: 0;
+}
+
+.mainmenu a {
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 20px; 
+    color:antiquewhite;
+}
+
+.mainmenu a.current{
+    color:aquamarine;
+    font-weight:bold;
+}
+
+.mainmenu a:hover{
+    color:aquamarine;
+    transform: scale(1.2); 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.content a {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.site-header {
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+
+.site-header svg {
+    width: 320px; 
+    height: 200px; 
+    position:fixed;
+    left:0;
+    top:0;
+    transition: transform 0.3s; 
+}
+
+.site-header svg:hover {
+    transform:scale(1.2);
+}
+
+#video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        opacity: 65;
+}
+.articles-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+
+.article-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 50%; 
+    height: 550px;
+    color:black;
+    font-family: 'Acme', sans-serif;
+    background-color: rgba(127, 255, 212, 0.7);;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.article-image {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.article-image:hover {
+    transform: scale(1.2);
+    filter: grayscale(100%);
+}
+
+footer {
+    background-color: #333; 
+    margin-top: 100px;
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+}
+
+.tour{
+    text-align:center;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: rgba(127, 255, 212, 0.7); 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    font-family: 'Acme', sans-serif;
+    color: #333;
+    margin-top: 25px;
+}
+.tour h1 {
+    font-size: 24px; 
+    color: white; 
+}
+
+.tour h4 {
+    font-size: 18px; 
+}
+
+.tour .tour-image{
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+    margin: 0 auto;
+}
+
+.tour .tour-image:hover{
+    transform: scale(1.1); 
+}
+
+.tour p {
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+
+.tour-button {
+    background-color:darkseagreen; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.tour-button:hover {
+    background-color: black; 
+}
+body {
+    background-image: url('Photos/pexels-peter-fazekas-8445447.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  } 
+
+  .hamburger-menu {
+    display: none; /* Hide by default on larger screens */
+}
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    #video {
+        display: none; 
+    }
+
+    .articles-container {
+        
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px; 
+    }
+
+    .site-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        
+        
+    }
+    
+
+    .article-box {
+        width: 90%; 
+        margin: 10px auto;
+    }
+    
+    .site-header svg {
+        width: 350px; 
+        height: auto;
+        position: static; 
+        margin-bottom: 20px; 
+    }
+
+    
+    .mainmenu {
+        display: none; /* Hide the menu on small screens initially */
+        /* Other mobile styles for the menu */
+    }
+
+    .mainmenu.show-menu{
+        display:block;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger icon on smaller screens */
+        cursor: pointer;
+        position: fixed;
+        top: 20px; /* Adjust this value as needed */
+        right: 20px; /* Adjust this value as needed */
+        z-index: 1000;
+        /* Additional styles for the hamburger icon */
+    }
+    .hamburger {
+        width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    }
+
+    .tour-button {
+        background-color:darkseagreen; 
+        color: white; 
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        width: 100px;
+        height: 50px;
+        font-size: 12px;
+    }
+}
